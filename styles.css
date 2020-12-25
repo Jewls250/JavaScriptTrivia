@@ -1,0 +1,14 @@
+
+.backgroundColor{
+    background-color: rgba(14, 13, 13, 0.534);
+}
+
+#textMargin{
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+#width{
+    width: 30%;
+}
