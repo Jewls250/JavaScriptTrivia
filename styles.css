@@ -12,3 +12,11 @@
 #width{
     width: 30%;
 }
+
+#textCenter{
+    text-align: center;
+}
+
+.btnType{
+    list-style-type: none;
+}   
