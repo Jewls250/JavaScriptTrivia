@@ -1,5 +1,5 @@
 let startTime = 60;
-let myVar;
+let delay;
 
 let answerKey = {
     questionOne : "An object-oriented computer programming language commonly used to create interactive effects within web browsers.",
@@ -286,13 +286,15 @@ function timer(){
         startTime--
         timerContainerEl.innerHTML = startTime ;
     } else {
-        return alert("Game Over")
+      startTime = 0
+      confirm('Game Over')
+      clearInterval(startTime)
     }
   
 }
 
 function timerContainer() {
-    myVar = setInterval(timer, 1000);
+    delay = setInterval(timer, 1000);
 }
 
 
@@ -303,33 +305,33 @@ function highScores(){
 document.querySelector('#startTrivia').addEventListener("click",  () => {
     containerEl.innerHTML = questionOnePage    
     timerContainer()
-})
 
 document.querySelector('#questionOneComplete').addEventListener("click",  () => {
   containerEl.innerHTML = questionTwoPage  
   timerContainer()  
-})
 
 document.querySelector('#questionTwoComplete').addEventListener("click",  () => {
   containerEl.innerHTML = questionThreePage    
   timerContainer()
-})
-
+        
 document.querySelector('#questionThreeComplete').addEventListener("click",  () => {
   containerEl.innerHTML = questionFourPage
-  timerContainer()    
-})
+  timerContainer()  
 
-document.querySelector('#questiongFourComplete').addEventListener("click",  () => {
+document.querySelector('#questionFourComplete').addEventListener("click",  () => {
   containerEl.innerHTML = questionFivePage  
   timerContainer()  
-})
 
-document.querySelector('#questiongFiveComplete').addEventListener("click",  () => {
+document.querySelector('#questionFiveComplete').addEventListener("click",  () => {
   containerEl.innerHTML = highScore   
-})
 
 document.querySelector('#highScore').addEventListener("click",  () => {
-  containerEl.innerHTML = PlayAgain   
+  location.reload()   
+            })
+          })
+        })
+      })
+    })
+  })
 })
 
