@@ -286,9 +286,9 @@ function timer(){
         startTime--
         timerContainerEl.innerHTML = startTime ;
     } else {
-      startTime = 0
       confirm('Game Over')
-      clearInterval(startTime)
+      startTime = 0
+      clearInterval(delay)
     }
   
 }
@@ -308,19 +308,19 @@ document.querySelector('#startTrivia').addEventListener("click",  () => {
 
 document.querySelector('#questionOneComplete').addEventListener("click",  () => {
   containerEl.innerHTML = questionTwoPage  
-  timerContainer()  
+   
 
 document.querySelector('#questionTwoComplete').addEventListener("click",  () => {
   containerEl.innerHTML = questionThreePage    
-  timerContainer()
+  
         
 document.querySelector('#questionThreeComplete').addEventListener("click",  () => {
   containerEl.innerHTML = questionFourPage
-  timerContainer()  
+   
 
 document.querySelector('#questionFourComplete').addEventListener("click",  () => {
   containerEl.innerHTML = questionFivePage  
-  timerContainer()  
+   
 
 document.querySelector('#questionFiveComplete').addEventListener("click",  () => {
   containerEl.innerHTML = highScore   
@@ -334,4 +334,11 @@ document.querySelector('#highScore').addEventListener("click",  () => {
     })
   })
 })
-
+document.querySelector('#highScore').addEventListener("click",  () => {
+  containerEl.innerHTML = highScore    
+  
+  document.querySelector('#highScore').addEventListener("click",  () => {
+    location.reload()   
+ })
+})
+  
