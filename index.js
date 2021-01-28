@@ -16,9 +16,9 @@ let questionFive = answerKey[4]
 
 let containerEl = document.querySelector('#questionId');
 let timerContainerEl = document.querySelector('#timerContainerEl')
+let pageContent = document.querySelector("#pageContent")
 
 let questionOnePage = `<div class="jumbotron my-5 " >
-<h1 class="display-4" id="textCenter">JavaScript Trivia</h1>
 <h3 id="textCenter">Question: What is JavaScript?</h3>
 
 <hr class="my-4">
@@ -53,7 +53,6 @@ let questionOnePage = `<div class="jumbotron my-5 " >
 </div>`;
 
 let questionTwoPage = `<div class="jumbotron my-5 " >
-<h1 class="display-4" id="textCenter">JavaScript Trivia</h1>
 <h3 id="textCenter">Question: Which one of the following is the JavaScript file extension.</h3>
 <hr class="my-4">
 
@@ -87,7 +86,6 @@ let questionTwoPage = `<div class="jumbotron my-5 " >
 </div>`;
 
 let questionThreePage = `<div class="jumbotron my-5 " >
-<h1 class="display-4" id="textCenter">JavaScript Trivia</h1>
 <h3 id="textCenter">Question: Which tag starts JavaScript.</h3>
 
 <hr class="my-4">
@@ -121,7 +119,6 @@ let questionThreePage = `<div class="jumbotron my-5 " >
 </div>`;
 
 let questionFourPage = `<div class="jumbotron my-5 " >
-<h1 class="display-4" id="textCenter">JavaScript Trivia</h1>
 <h3 id="textCenter">Question: Which of the following is a self closing tag</h3>
 
 <hr class="my-4">
@@ -156,7 +153,6 @@ let questionFourPage = `<div class="jumbotron my-5 " >
 </div>`;
 
 let questionFivePage = `<div class="jumbotron my-5 " >
-<h1 class="display-4" id="textCenter">JavaScript Trivia</h1>
 <h3 id="textCenter">Question: let x == 5 + '5'. Which of the following is correct.</h3>
 
 <hr class="my-4">
@@ -205,15 +201,6 @@ let highScore = `<div class="jumbotron my-5 " >
 <a name="" id="highScore" class="btn btn-primary" role="button">Play Again</a>  
 </div>`
 
-function rightAnswers(answer) {
-    if (answer === questionOne || answer === questionTwo || answer === questionThree || answer === questionFour || answer === questionFive){
-        return 'Correct'
-    } else {
-        startTime -= 5;
-        return 'Incorrect'
-    }
-}
-
 function timer(){
   
     if(startTime > 0){
@@ -232,35 +219,52 @@ function timerContainer() {
 }
 
 document.querySelector('#startTrivia').addEventListener("click",  () => {
-    containerEl.innerHTML = questionOnePage    
+    pageContent.innerHTML = questionOnePage    
     timerContainer()
+    document.querySelector('#btnContainer').innerHTML = ""
 
-document.querySelector('#questionOneComplete').addEventListener("click",  () => {
-  containerEl.innerHTML = questionTwoPage  
-   
 
-document.querySelector('#questionTwoComplete').addEventListener("click",  () => {
-  containerEl.innerHTML = questionThreePage    
-  
-        
-document.querySelector('#questionThreeComplete').addEventListener("click",  () => {
-  containerEl.innerHTML = questionFourPage
-   
+pageContent.addEventListener("click",  (e) => {
+  pageContent.innerHTML = questionTwoPage  
+  console.log(e.target.textContent)
 
-document.querySelector('#questionFourComplete').addEventListener("click",  () => {
-  containerEl.innerHTML = questionFivePage  
-   
+  if (answerKey.questionOne !== e.target.textContent){
+    startTime -= 5
+  }
 
-document.querySelector('#questionFiveComplete').addEventListener("click",  () => {
-  containerEl.innerHTML = highScore   
+    pageContent.addEventListener("click", (e) => {
+      pageContent.innerHTML = questionThreePage;
+      if (answerKey.questionTwo === e.target.textContent) {
+       
+      }
 
-document.querySelector('#highScore').addEventListener("click",  () => {
-  location.reload()   
-            })
-          })
-        })
-      })
-    })
+      pageContent.addEventListener("click", (e) => {
+        pageContent.innerHTML = questionFourPage;
+        if (answerKey.questionThree === e.target.textContent) {
+          
+        }
+
+        pageContent.addEventListener("click", (e) => {
+          pageContent.innerHTML = questionFivePage;
+          if (answerKey.questionFour === e.target.textContent) {
+            
+          }
+
+          pageContent.addEventListener("click", (e) => {
+            pageContent.innerHTML = highScore;
+            if (answerKey.questionFive === e.target.textContent) {
+
+            }
+
+            document.querySelector("#hideTimer").innerHTML = ""
+            clearInterval(delay)
+            document.querySelector("#highScore").addEventListener("click", () => {
+                location.reload();
+              });
+          });
+        });
+      });
+    });
   })
 })
 document.querySelector('#highScore').addEventListener("click",  () => {
@@ -270,4 +274,3 @@ document.querySelector('#highScore').addEventListener("click",  () => {
     location.reload()   
  })
 })
-  

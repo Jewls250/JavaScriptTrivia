@@ -16,18 +16,24 @@
       <div id='questionId'>
         <div class="jumbotron my-5 text-center" >
           <h1 class="display-4" >JavaScript Trivia</h1>
-          <h3>Instructions To Trivia</h3>
-          <p id="textMargin">Click the Start Trivia below to start timer and try to answer all 5 questions as quick as possible.</p>
-          <hr class="my-4">
-          
-          
-          <a name="" id="startTrivia" class="btn btn-primary mx-2" role="button">Start Trivia</a>
+          <div id="pageContent">
+            <h3>Instructions To Trivia</h3>
+            <p id="textMargin">Click the Start Trivia below to start timer and try to answer all 5 questions as quick as possible.</p>
+            <hr class="my-4">
+          </div>
+          <div id="btnContainer">
+            <a name="" id="startTrivia" class="btn btn-primary mx-2" role="button">Start Trivia</a>
           <a name="" id="highScore" class="btn btn-primary mx-2" role="button">High Scores</a>
+          </div>
+          
         </div>
+          
       
       </div>
-      <h4>Time Remaining:</h4>
-      <h4 class="my-4 secondary" id="timerContainerEl"></h4>
+      <div id="hideTimer">
+        <h4>Time Remaining:</h4>
+        <h4 class="my-4 secondary" id="timerContainerEl"></h4>
+      </div>
     </div>
     
     
