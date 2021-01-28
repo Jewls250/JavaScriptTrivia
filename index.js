@@ -26,43 +26,31 @@ let questionOnePage = `<div class="jumbotron my-5 " >
 <ul >
   <li class="my-3">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">An object-oriented computer programming language commonly used to create interactive effects within web browsers.
-      </label>
+        <button class="btn btn-primary">An object-oriented computer programming language commonly used to create interactive effects within web browsers.</button>
     </div>
   </li>
 
   <li class="my-3">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">A library for building user interfaces.
-      </label>
+        <button class="btn btn-primary">A library for building user interfaces.</button>
     </div>
   </li>
 
   <li class="my-3">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">An open source server environment.
-      </label>
+        <button class="btn btn-primary">An open source server environment.</button>
     </div>
   </li>
 
   <li class="my-3">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.
-      </label>
+        <button class="btn btn-primary">Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.</button>
     </div>
   </li>
-
-  <hr class="my-4">
-
-  <a name="" id="questionOneComplete" class="btn btn-primary" role="button">Submit</a>
 
 </ul>
 
-</div>`
+</div>`;
 
 let questionTwoPage = `<div class="jumbotron my-5 " >
 <h1 class="display-4" id="textCenter">JavaScript Trivia</h1>
@@ -72,43 +60,31 @@ let questionTwoPage = `<div class="jumbotron my-5 " >
 <ul >
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">.JavaS
-      </label>
+        <button class="btn btn-primary">.JavaS</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">.JavaScript
-      </label>
+        <button class="btn btn-primary">.JavaScript</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">.Js
-      </label>
+        <button class="btn btn-primary">.Js</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">.Html
-      </label>
+        <button class="btn btn-primary">.Html</button>
     </div>
   </li>
-
-  <hr class="my-4">
-
-  <a name="" id="questionTwoComplete" class="btn btn-primary" role="button">Submit</a>
 
 </ul>
 
-</div>`
+</div>`;
 
 let questionThreePage = `<div class="jumbotron my-5 " >
 <h1 class="display-4" id="textCenter">JavaScript Trivia</h1>
@@ -119,43 +95,30 @@ let questionThreePage = `<div class="jumbotron my-5 " >
 <ul >
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">JavaScript tag
-      </label>
+        <button class="btn btn-primary">JavaScript tag</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">Script tag
-      </label>
+        <button class="btn btn-primary">Script tag</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">Java tag
-      </label>
+        <button class="btn btn-primary">Java tag</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">Html tag
-      </label>
+        <button class="btn btn-primary">Html tag</button>
     </div>
   </li>
-
-  <hr class="my-4">
-
-  <a name="" id="questionThreeComplete" class="btn btn-primary" role="button">Submit</a>
-
 </ul>
 
-</div>`
+</div>`;
 
 let questionFourPage = `<div class="jumbotron my-5 " >
 <h1 class="display-4" id="textCenter">JavaScript Trivia</h1>
@@ -166,43 +129,31 @@ let questionFourPage = `<div class="jumbotron my-5 " >
 <ul >
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">Img
-      </label>
+        <button class="btn btn-primary">Img</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">Script
-      </label>
+        <button class="btn btn-primary">Script</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">Div
-      </label>
+        <button class="btn btn-primary">Div</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">Section
-      </label>
+        <button class="btn btn-primary">Section</button>
     </div>
   </li>
-
-  <hr class="my-4">
-
-  <a name="" id="questionFourComplete" class="btn btn-primary" role="button">Submit</a>
 
 </ul>
 
-</div>`
+</div>`;
 
 let questionFivePage = `<div class="jumbotron my-5 " >
 <h1 class="display-4" id="textCenter">JavaScript Trivia</h1>
@@ -213,42 +164,30 @@ let questionFivePage = `<div class="jumbotron my-5 " >
 <ul >
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">10
-      </label>
+        <button class="btn btn-primary">10</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">Null
-      </label>
+        <button class="btn btn-primary">Null</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">55
-      </label>
+        <button class="btn btn-primary">55</button>
     </div>
   </li>
 
   <li class="my-2">
     <div class="form-check form-check-inline">
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="" id="" value="checkedValue">Undefined
-      </label>
+        <button class="btn btn-primary">Undefined</button>
     </div>
   </li>
-
-  <hr class="my-4">
-
-  <a name="" id="questionFiveComplete" class="btn btn-primary" role="button">Submit</a>
 </ul>
 
-</div>`
+</div>`;
 
 let highScore = `<div class="jumbotron my-5 " >
 <h1 class="display-4" id="textCenter">High Scores</h1>
@@ -258,11 +197,6 @@ let highScore = `<div class="jumbotron my-5 " >
 <ol>
   <li class="my-4"></li>
   <li class="my-4"></li> 
-  <li class="my-4"></li>
-  <li class="my-4"></li>
-  <li class="my-4"></li>
-  <li class="my-4"></li>
-  <li class="my-4"></li>
   <li class="my-4"></li>
   <li class="my-4"></li>
   <li class="my-4"></li>
@@ -295,11 +229,6 @@ function timer(){
 
 function timerContainer() {
     delay = setInterval(timer, 1000);
-}
-
-
-function highScores(){
-    
 }
 
 document.querySelector('#startTrivia').addEventListener("click",  () => {
