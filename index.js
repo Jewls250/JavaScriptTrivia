@@ -1,5 +1,6 @@
 let startTime = 60;
 let delay;
+let scores = []
 
 let answerKey = {
     questionOne : "An object-oriented computer programming language commonly used to create interactive effects within web browsers.",
@@ -185,21 +186,22 @@ let questionFivePage = `<div class="jumbotron my-5 " >
 
 </div>`;
 
-let highScore = `<div class="jumbotron my-5 " >
+function highscore (score) {
+  return `<div class="jumbotron my-5 " >
 <h1 class="display-4" id="textCenter">High Scores</h1>
 
 <hr class="my-4">
 
 <ol>
-  <li class="my-4"></li>
-  <li class="my-4"></li> 
-  <li class="my-4"></li>
-  <li class="my-4"></li>
-  <li class="my-4"></li>
+  <li class="my-4">${score[0]}</li>
+  <li class="my-4">${score[1]}</li> 
+  <li class="my-4">${score[2]}</li>
+  <li class="my-4">${score[3]}</li>
+  <li class="my-4">${score[4]}</li>
 </ol>
 <hr class="my-4">
 <a name="" id="highScore" class="btn btn-primary" role="button">Play Again</a>  
-</div>`
+</div>`;}
 
 function timer(){
   
@@ -217,6 +219,10 @@ function timer(){
 function timerContainer() {
     delay = setInterval(timer, 1000);
 }
+
+
+
+
 
 document.querySelector('#startTrivia').addEventListener("click",  () => {
     pageContent.innerHTML = questionOnePage    
@@ -251,7 +257,13 @@ pageContent.addEventListener("click",  (e) => {
           }
 
           pageContent.addEventListener("click", (e) => {
-            pageContent.innerHTML = highScore;
+            scores.push(startTime)
+            console.log(scores)
+            localStorage.setItem("timeRemaining", JSON.stringify(scores))
+            let currentTime = localStorage.getItem("timeRemaining")
+            let highscoreArr = JSON.parse(currentTime)
+            pageContent.innerHTML = highscore(highscoreArr);
+            
             if (answerKey.questionFive === e.target.textContent) {
 
             }
@@ -267,10 +279,18 @@ pageContent.addEventListener("click",  (e) => {
     });
   })
 })
+
+
+
 document.querySelector('#highScore').addEventListener("click",  () => {
-  containerEl.innerHTML = highScore    
-  
+  let currentTime = localStorage.getItem("timeRemaining");
+  let highscoreArr = JSON.parse(currentTime);
+  pageContent.innerHTML = highscore(highscoreArr);
+
+  document.querySelector("#btnContainer").innerHTML = ""; 
+  document.querySelector("#hideTimer").innerHTML = ""; 
   document.querySelector('#highScore').addEventListener("click",  () => {
-    location.reload()   
+    location.reload()
+     
  })
 })
